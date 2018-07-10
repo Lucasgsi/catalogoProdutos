@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ServidorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Produtos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let produto of produtos" >
+      <h2>Id: {{produto.id}}</h2>
+      <h2>Produto: {{produto.nome}}</h2>
+      <h3>Estoque: {{produto.estoque}}</h3>
+      <h3>Estoque Minimo: {{produto.estoqueminimo}}</h3>
+      <h3>Preço Venda: R$ {{produto.precovenda}}</h3>
+      <h3>Preço Compra: R$ {{produto.precocompra}}</h3>
+    </ion-item>
+
+    <ion-item *ngFor="let produto of produtoServ">
+      <h2>Id: {{produto.id}}</h2>
+      <h2>Produto: {{produto.nome}}</h2>
+      <h3>Estoque: {{produto.estoque}}</h3>
+      <h3>Estoque Minimo: {{produto.estoqueMin}}</h3>
+      <h3>Preço Venda: R$ {{produto.precoVenda}}</h3>
+      <h3>Preço Compra: R$ {{produto.precoCompra}}</h3>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

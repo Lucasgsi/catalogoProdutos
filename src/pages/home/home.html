@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Catalogo de Produtos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating="">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating="">Estoque</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.estoque = converterNumber($event)" [(ngModel)]="produto.estoque"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating="">Estoque Minimo</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.estoqueminimo = converterNumber($event)" [(ngModel)]="produto.estoqueminimo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating="">Preço de Venda</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.precovenda = converterNumber($event)" [(ngModel)]="produto.precovenda"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating="">Preço de Compra</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.precocompra = converterNumber($event)" [(ngModel)]="produto.precocompra"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button color="danger" ion-button full round (click)="cadastrarProduto()">
+      Cadastrar Produto Locais</button>
+
+  <button color="danger" ion-button full round (click)="viewProdutosLocal()">
+      Visualisar Produtos Locais</button>
+
+  <button color="dark" ion-button full round (click)="cadastrarProdutoServidor()">
+      Cadastrar Produto Servidor</button>
+
+  <button color="dark" ion-button full round (click)="viewProdutosServidor()">
+      Visualisar Produtos Servidor</button>
+
+</ion-content>
